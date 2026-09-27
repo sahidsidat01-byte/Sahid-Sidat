@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #1f0b25;
+  --color-surface-dim: #1f0b25;
+  --color-surface-bright: #47314d;
+  --color-surface-container-lowest: #19061f;
+  --color-surface-container-low: #28142d;
+  --color-surface-container: #2c1832;
+  --color-surface-container-high: #37223d;
+  --color-surface-container-highest: #432d48;
+  --color-background: #1f0b25;
+  --color-on-background: #f8d8fc;
+  --color-on-surface: #f8d8fc;
+  --color-on-surface-variant: #d1c5b3;
+  --color-outline: #998f7f;
+  --color-outline-variant: #4d4638;
+  --color-primary: #f2ca7a;
+  --color-primary-container: #d4af62;
+  --color-on-primary: #402d00;
+  --color-secondary: #debaee;
+  --color-secondary-container: #5a3e69;
+  --color-secondary-fixed: #f5d9ff;
+  --color-tertiary: #e3c6ed;
+  --color-tertiary-container: #c6abd0;
+  --color-gold: #d4af62;
+  --color-gold-light: #f2ca7a;
+  --color-gold-dark: #b88f3e;
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-on-surface);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #19061f;
+}
+::-webkit-scrollbar-thumb {
+  background: #432d48;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af62;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(44, 24, 50, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(242, 202, 122, 0.12);
+}
+
+.glass-panel-elevated {
+  background: rgba(55, 34, 61, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(242, 202, 122, 0.22);
+  box-shadow: 0 16px 36px -6px rgba(25, 6, 31, 0.8);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px -4px rgba(212, 175, 98, 0.35);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #ffdea0 0%, #f2ca7a 50%, #d4af62 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Jessa's Beauty Parlor & Aesthetics",
+  "description": "Haute luxury beauty parlor and aesthetics sanctuary offering bespoke bridal styling, couture hair architecture, restorative skincare, and VIP salon rituals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
